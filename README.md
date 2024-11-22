@@ -6,7 +6,7 @@ A simple game of photo tagging app. Like Where's Waldo, user is given a large im
 
 ## Live demo
 
-- todo
+- https://odin-rails-wheres-waldo.onrender.com/
 
 
 ## Tech-stack
