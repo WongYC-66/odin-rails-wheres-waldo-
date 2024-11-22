@@ -30,9 +30,11 @@ function Selection(props) {
 
   const fetchRes = async (val, x, y) => {
     const myHeaders = new Headers();
+    const token = document.querySelector('meta[name="csrf-token"]').content;
     myHeaders.append("Content-Type", "application/json");
+    myHeaders.append("X-CSRF-Token", token);
 
-    const response = await fetch(`api/v1/success_guess_post`, {
+    const response = await fetch(`api/v1/guess`, {  
       method: "POST",
       headers: myHeaders,
       body: JSON.stringify({ val, x, y }),

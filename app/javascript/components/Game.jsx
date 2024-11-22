@@ -11,7 +11,7 @@ const chr03Img = '/images/chr03.png'
 const chr04Img = '/images/chr04.png'
 const chr99Img = '/images/chr04.png'
 
-function Game({ setShowPage }) {
+function Game() {
 
   const [characters, setCharacters] = useState([1, 2, 3, 4])
   const [showSelection, setShowSelection] = useState(false)
@@ -124,7 +124,7 @@ function Game({ setShowPage }) {
       })}
 
       {/* EndPage and query username */}
-      {characters.length === 0 && <EndPage time={time} setShowPage={setShowPage}/>}
+      {characters.length === 0 && <EndPage time={time}/>}
 
     </div >
   )

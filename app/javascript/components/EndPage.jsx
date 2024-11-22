@@ -4,7 +4,6 @@ import { useEffect, useState } from "react"
 function EndPage(props) {
 
   let time = props.time
-  let setShowPage = props.setShowPage
 
   const [modalVisible, setModalVisible] = useState(false);
   let modalInstance = null;
@@ -43,7 +42,6 @@ function EndPage(props) {
     console.log("submitted")
     updateBE()
     hideModal()
-    setShowPage('home')
   }
 
   const updateBE = async (val, x, y) => {
