@@ -5,9 +5,9 @@ export default () => (
     <div className='d-flex flex-column min-vh-100 overflow-x-hidden p-2 bg-danger-subtle'>
 
         <main className='flex-fill'>
-            <Link to={"/"}>Home</Link>
+            {/* <Link to={"/"}>Home</Link>
             <Link to={"/game"}>Game</Link>
-            <Link to={"/score"}>Score</Link>
+            <Link to={"/scoreboard"}>Score Board</Link> */}
 
             <Outlet />
         </main>

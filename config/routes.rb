@@ -2,8 +2,11 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       post "/guess", to: "guess#create"
+      post "/score", to: "score#create"
+      get "/score", to: "score#index"
     end
   end
+
   root "homepage#index"
   get "/*path" => "homepage#index"
 

@@ -15,7 +15,7 @@ export default () => {
   }
 
   const scoreButtonClick = () => {
-    navigate("/score");
+    navigate("/scoreboard");
   }
 
   return (

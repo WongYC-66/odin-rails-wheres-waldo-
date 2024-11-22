@@ -9,10 +9,10 @@ const chr01Img = '/images/chr01.png'
 const chr02Img = '/images/chr02.png'
 const chr03Img = '/images/chr03.png'
 const chr04Img = '/images/chr04.png'
-const chr99Img = '/images/chr04.png'
+const chr99Img = '/images/chr99.png'
 
 function Game() {
-
+  
   const [characters, setCharacters] = useState([1, 2, 3, 4])
   const [showSelection, setShowSelection] = useState(false)
   const [selectionProp, setSelectionProp] = useState({

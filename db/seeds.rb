@@ -7,3 +7,7 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+p "Start seeding..."
+User.find_or_create_by!(name: "admin", time: 60)
+p "Start done."

@@ -1,7 +1,12 @@
 import React from "react";
 import { useEffect, useState } from "react"
+import { useNavigate } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import bootstrap from 'bootstrap/dist/js/bootstrap.bundle.min';
+
 
 function EndPage(props) {
+  const navigate = useNavigate();
 
   let time = props.time
 
@@ -42,15 +47,18 @@ function EndPage(props) {
     console.log("submitted")
     updateBE()
     hideModal()
+    navigate("/")
   }
 
   const updateBE = async (val, x, y) => {
     const myHeaders = new Headers();
+    const token = document.querySelector('meta[name="csrf-token"]').content;
     myHeaders.append("Content-Type", "application/json");
+    myHeaders.append("X-CSRF-Token", token);
 
     let username = document.querySelector('#username').value
 
-    const response = await fetch(`api/v1/score_board_post`, {
+    const response = await fetch(`api/v1/score`, {
       method: "POST",
       headers: myHeaders,
       body: JSON.stringify({ username, time, }),
